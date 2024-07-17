@@ -1,0 +1,242 @@
+@font-face {
+    font-family: barberFont;
+    src: url('../big_noodle_titling.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: barberFont, sans-serif;
+    position: relative;
+}
+
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Behind all content */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 1;
+}
+header {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    margin: 5vh 10vw 6rem 10vw;
+}
+
+a {
+    margin: 1rem;
+    color: white;
+    text-decoration: none;
+    padding-top: 4px;
+}
+
+a:hover {
+    color: rgb(141, 141, 141);
+}
+
+h1, h2 {
+    color: #ffffff;
+    font-family: barberFont;
+    font-size: 3rem;
+}
+
+aside {
+    margin-top: 3rem;
+}
+
+aside > p {
+    color: rgb(141, 141, 141);
+}
+
+
+
+#agende-btn {
+    border: solid 2px rgb(141, 141, 141);
+    border-radius: 10rem;
+    padding: 5px;
+    width: 7rem;
+    text-align: center;
+    animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+        
+    }
+    100% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+#agende-btn:hover {
+    background-color: rgb(141, 141, 141);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+p {
+    color: white;
+}
+
+#barberImage{
+    height: 25rem;
+    border-radius: 50%;
+    box-shadow: 0 0rem 6rem -.10rem rgb(66, 66, 66);
+    max-width: 100%;
+    margin: 10px;
+}
+
+#locate-section {
+    width: 80%;
+    max-width: 400px;
+    background-color: rgb(141, 141, 141);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0rem 2rem -.1rem rgb(107, 107, 107);
+    text-align: center;
+    animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+#locate-section > h3, p {
+    font-family: barberFont;
+    font-size: 2rem;
+    color: rgb(66, 66, 66);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    main {
+        margin: 5vh 5vw 6rem 5vw;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    img {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        margin: 0.5rem;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    img {
+        height: 15rem;
+    }
+
+    #locate-section > h3, p {
+        font-size: 1.5rem;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 5vh 2vw 6rem 2vw;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    img {
+        height: 12rem;
+    }
+
+    #locate-section > h3, p {
+        font-size: 1.2rem;
+    }
+
+    #agende-btn {
+        width: 5rem;
+        font-size: 0.9rem;
+    }
+}
+#about-section{
+    padding: 3rem;
+}
+#about-section > p{
+    font-size:larger;
+    color: rgb(66, 66, 66);
+}
+#about-section > h4{
+    font-size: 1.6rem;
+    color:rgb(255, 255, 255)
+
+}
